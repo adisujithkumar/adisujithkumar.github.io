@@ -31,11 +31,7 @@ a:hover{ text-decoration:underline }
 
 .wrap{ max-width:var(--maxw); margin:0 auto; }
 
-/* shared top bar: view switch + theme toggle */
-.topbar{ display:flex; justify-content:space-between; align-items:center; gap:1rem; }
-.view{ font-size:.8rem; color:var(--fg-muted); }
-.view a{ color:var(--fg-muted) }
-.view .cur{ color:var(--fg) }
+/* theme toggle button */
 .theme{
   background:none; border:1px solid var(--border); border-radius:999px;
   padding:.2rem .6rem; cursor:pointer; color:var(--fg-muted);
@@ -48,3 +44,11 @@ a:hover{ text-decoration:underline }
   border-radius:4px; padding:.12rem .42rem; margin:.18rem .28rem .18rem 0;
 }
 .tags{ margin-top:.5rem }
+
+/* meta row: an accented "field" chip + the muted stack tags, shown under each entry */
+.meta{ display:flex; flex-wrap:wrap; align-items:center; }
+.field{
+  display:inline-block; font-size:.7rem; color:var(--accent);
+  border:1px solid var(--accent); border-radius:4px;
+  padding:.1rem .42rem; margin:.18rem .28rem .18rem 0; line-height:1.35;
+}

@@ -9,19 +9,26 @@
       return '<a href="' + l.url + '">' + (l.short || l.label.toLowerCase()) + "</a>";
     }).join(" · ");
   }
-  function tagline(t) {
-    return '<div class="tags">' + (t || []).map(function (x) { return '<span class="tag">' + x + "</span>"; }).join("") + "</div>";
+  function meta(field, t) {
+    var f = field ? '<span class="field">' + field + "</span>" : "";
+    var c = (t || []).map(function (x) { return '<span class="tag">' + x + "</span>"; }).join("");
+    return '<span class="meta">' + f + c + "</span>";
   }
 
   byId("who").textContent = d.profile.name;
+  byId("cstandfirst").textContent = d.profile.standfirst || "";
   byId("clinks").innerHTML = linkline(d.profile.links);
 
   byId("cexp").innerHTML = d.experience.map(function (e) {
     return '<details class="crow"><summary>' +
-      '<span class="mark"></span>' +
-      '<span class="k">' + slug(e.org) + "</span>" +
-      '<span class="lead"></span>' +
-      '<span class="v">' + e.role.toLowerCase() + " · " + e.year + "</span></summary>" +
+      '<span class="cline">' +
+        '<span class="mark"></span>' +
+        '<span class="k">' + slug(e.org) + "</span>" +
+        '<span class="lead"></span>' +
+        '<span class="v">' + e.role.toLowerCase() + " · " + e.year + "</span>" +
+      "</span>" +
+      '<span class="cblurb">' + e.blurb + "</span>" +
+      meta(e.field, e.tags) + "</summary>" +
       '<div class="detail"><span class="txt">' + e.detail + "</span></div></details>";
   }).join("") +
   '<div class="comment">edu: ' + d.education.detail.toLowerCase() + "</div>";
@@ -43,9 +50,10 @@
       return '<div class="prow">' +
         '<div class="pname">' + p.title + "</div>" +
         '<div class="pblurb">' + p.blurb + "</div>" +
+        meta(p.field, p.tags) +
         '<div class="plink">' + linkline(p.links) + "</div>" +
         '<details class="pmore"><summary>more</summary>' +
-          '<div class="txt">' + p.detail + "</div>" + tagline(p.tags) +
+          '<div class="txt">' + p.detail + "</div>" +
         "</details></div>";
     }).join("");
   }

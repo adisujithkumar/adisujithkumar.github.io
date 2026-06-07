@@ -42,10 +42,14 @@ body{ font-family:var(--font-mono); line-height:1.55; font-size:14px; }
 .ascii{ color:var(--accent); font-size:.72rem; line-height:1.12; margin:.1rem 0 .5rem; white-space:pre; overflow:hidden; }
 h1.who{ font-size:1.05rem; margin:.1rem 0 .3rem; font-weight:700; }
 .links{ display:flex; gap:.85rem; flex-wrap:wrap; color:var(--fg-muted); }
+.standfirst{ margin:.12rem 0 .5rem; font-size:.92em; line-height:1.5; color:var(--fg-muted); }
 
 /* experience as an expandable file listing */
-.crow > summary{ list-style:none; cursor:pointer; display:flex; align-items:baseline; padding:.2rem 0; }
+.crow > summary{ list-style:none; cursor:pointer; display:block; padding:.2rem 0; }
 .crow > summary::-webkit-details-marker{ display:none }
+.crow .cline{ display:flex; align-items:baseline; }
+.crow .cblurb{ display:block; color:var(--fg-muted); margin:.05rem 0 .15rem 1.6rem; font-size:.95em; }
+.crow .meta{ margin:.12rem 0 .35rem 1.6rem; }
 .crow .mark{ color:var(--accent); margin-right:.55rem; flex:0 0 auto; }
 .crow .mark::after{ content:"▸"; }
 .crow[open] .mark::after{ content:"▾"; }
@@ -71,6 +75,7 @@ h1.who{ font-size:1.05rem; margin:.1rem 0 .3rem; font-weight:700; }
 .pname{ color:var(--fg); }
 .pname::before{ content:"▸ "; color:var(--accent); }
 .pblurb{ color:var(--fg-muted); margin:.12rem 0 .12rem 1.1rem; }
+.prow .meta{ margin:.15rem 0 .25rem 1.1rem; }
 .plink{ margin:0 0 .1rem 1.1rem; display:flex; gap:.7rem; flex-wrap:wrap; }
 .pmore{ margin-left:1.1rem; }
 .pmore > summary{ list-style:none; cursor:pointer; color:var(--fg-muted); }
