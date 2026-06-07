@@ -1,1 +1,48 @@
-This is a work in progress
+<!doctype html>
+<html lang="en" data-default-theme="terminal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adi@portfolio — Adi Sujithkumar</title>
+  <meta name="description" content="Adi Sujithkumar — Software Engineer (Product, LLMs, Full-Stack).">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/console.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="win">
+      <div class="winbar">
+        <span class="dots"><i class="r"></i><i class="y"></i><i class="g"></i></span>
+        <span class="wintitle">adi@portfolio — zsh</span>
+        <span class="winctl">
+          <span class="cur">console</span> · <a href="ledger.html">ledger</a>
+          <button class="theme" data-theme-cycle>[<span data-theme-label>terminal</span>]</button>
+        </span>
+      </div>
+      <div class="winbody" id="seq">
+        <div class="seqrow cmd" data-cmd="whoami">whoami</div>
+        <div class="seqrow out">
+<pre class="ascii" aria-hidden="true">            _ _
+  __ _  __| (_)
+ / _` |/ _` | |
+| (_| | (_| | |
+ \__,_|\__,_|_|</pre>
+          <h1 class="who" id="who"></h1>
+          <nav class="links" id="clinks"></nav>
+        </div>
+        <div class="seqrow cmd" data-cmd="cat experience.md">cat experience.md</div>
+        <div class="seqrow out" id="cexp"></div>
+        <div class="seqrow cmd" data-cmd="ls projects/">ls projects/</div>
+        <div class="seqrow out" id="cproj"></div>
+        <div class="seqrow promptline"><span class="prompt"><span class="u">adi@portfolio</span>:~$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/render-console.js"></script>
+  <script src="js/console-boot.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* base.css — design tokens + themes shared by every layout.
+   Nothing here hardcodes a color: each layout reads var(--*), and each theme
+   is just a block of variables. A future "prompt-an-aesthetic" feature only
+   has to emit one new [data-theme] block. */
+:root{
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --maxw: 660px;
+
+  /* light (default) */
+  --bg:#fcfcfc; --fg:#18181b; --fg-muted:#71717a; --accent:#2563eb;
+  --border:#e7e7ea; --tag-bg:#f4f4f5; --tag-fg:#52525b; --hero-bg:#f4f4f5;
+}
+:root[data-theme="dark"]{
+  --bg:#0e1014; --fg:#e7e7ea; --fg-muted:#8b8b94; --accent:#7aa2f7;
+  --border:#23252b; --tag-bg:#191b21; --tag-fg:#a1a1aa; --hero-bg:#15171c;
+}
+:root[data-theme="terminal"]{
+  --bg:#0a0d0a; --fg:#7cfc98; --fg-muted:#3f7a52; --accent:#f4f59a;
+  --border:#163521; --tag-bg:#0e1a10; --tag-fg:#5fae74; --hero-bg:#0c130c;
+}
+
+*{ box-sizing:border-box }
+html{ -webkit-text-size-adjust:100% }
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  transition: background .25s ease, color .25s ease;
+}
+a{ color:var(--accent); text-decoration:none }
+a:hover{ text-decoration:underline }
+
+.wrap{ max-width:var(--maxw); margin:0 auto; }
+
+/* shared top bar: view switch + theme toggle */
+.topbar{ display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.view{ font-size:.8rem; color:var(--fg-muted); }
+.view a{ color:var(--fg-muted) }
+.view .cur{ color:var(--fg) }
+.theme{
+  background:none; border:1px solid var(--border); border-radius:999px;
+  padding:.2rem .6rem; cursor:pointer; color:var(--fg-muted);
+  font:inherit; font-size:.78rem; line-height:1;
+}
+.theme:hover{ color:var(--fg); border-color:var(--fg-muted) }
+
+.tag{
+  display:inline-block; font-size:.7rem; background:var(--tag-bg); color:var(--tag-fg);
+  border-radius:4px; padding:.12rem .42rem; margin:.18rem .28rem .18rem 0;
+}
+.tags{ margin-top:.5rem }

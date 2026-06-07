@@ -1,0 +1,12 @@
+# Dependencies — this site is intentionally dependency-free (vanilla HTML/CSS/JS)
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# local preview / browser-tooling artifacts
+.playwright-mcp/
