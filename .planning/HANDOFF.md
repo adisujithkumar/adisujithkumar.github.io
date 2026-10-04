@@ -68,14 +68,14 @@ js/data.js              CONTENT — single source of truth (profile, experience[
 js/render-console.js    data → Console DOM  (SHOW_HEROES flag at line 4: text-only vs hero images)
 js/render-ledger.js     data → Ledger DOM
 js/console-boot.js      boot sequence + typed-command animation (once/session; ?replay; respects reduced-motion)
-js/theme.js             Light / Dark / Terminal switch (+ localStorage), shared by both views
+js/theme.js             Light / Dark / Terminal switch; every load boots the page default (terminal), not persisted
 assets/                 project hero images / GIFs (currently suppressed in Console)
 VISION.md IDEAS.md COPY.md README.md   planning + reference docs (see §6)
 ```
 
 ### How it fits together
 - **Two views, same data.** `index.html` = **Console** (terminal look; window chrome w/ traffic-light dots + title bar, ASCII banner, blinking prompt; **boots into Terminal theme**). `ledger.html` = **Ledger** (quiet fallback). A `console · ledger` switch toggles them.
-- **Content-as-data.** `js/data.js`: `profile`, 7 `experience` + `education`, 7 `projects` — **2 `"live"`** (awpy — map control; Knockout RL), **5 `"soon"`** (QBArena, catan-ai, sf-stride, valorant-highlight-identification, aca).
+- **Content-as-data.** `js/data.js`: `profile`, 8 `experience` + `education`, 7 `projects` — **2 `"live"`** (awpy — map control; Knockout RL), **5 `"soon"`** (QBArena, catan-ai, sf-stride, valorant-highlight-identification, aca). The `"soon"` entries are **not rendered** — they are the pipeline, and flipping one to `"live"` is what puts it on the page.
 - **Projects are text-only** via `SHOW_HEROES = false` at **line 4 of `js/render-console.js`** ("Flip to true to bring back hero images"). Hero assets exist (`assets/awpy-mapcontrol.gif`, `knockout-winrate.png`, `knockout-ui.png`, `awpy-mapcontrol-static.png`) but clashed with the terminal look. If reintroducing visuals, prefer **hero-in-`+more`-expand** over inline cards.
 - **README.md is accurate** (corrected this session to match the actual files).
 

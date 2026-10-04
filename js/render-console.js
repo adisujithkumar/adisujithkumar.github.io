@@ -33,8 +33,8 @@
   }).join("") +
   '<div class="comment">edu: ' + d.education.detail.toLowerCase() + "</div>";
 
+  // status:"soon" entries stay in data.js as the pipeline, but are not rendered.
   var live = d.projects.filter(function (p) { return p.status === "live"; });
-  var soon = d.projects.filter(function (p) { return p.status === "soon"; });
 
   var html;
   if (SHOW_HEROES) {
@@ -57,10 +57,6 @@
         "</details></div>";
     }).join("");
   }
-
-  html += soon.length
-    ? '<div class="comment">coming soon — ' + soon.map(function (p) { return slug(p.title); }).join(" · ") + "</div>"
-    : "";
 
   byId("cproj").innerHTML = html;
 

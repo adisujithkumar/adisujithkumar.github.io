@@ -5,10 +5,11 @@
 const DATA = {
   profile: {
     name: "Adi Sujithkumar",
-    // Shown only in <title>/meta for search + link previews — no on-page tagline by choice.
-    tagline: "Software Engineer — Product, LLMs, Full-Stack",
+    // Search + link previews only — no on-page tagline by choice. Mirrored by hand
+    // in index.html's <meta name="description">; keep the two in sync.
+    tagline: "Applied AI Engineer — LLM agents, Product, Full-Stack",
     // One-line bio under the name (whoami): industry experience + research interest.
-    standfirst: "full-stack engineer — llm agents & scalable backends; cv research background, exploring rl & llms",
+    standfirst: "applied ai engineer @ rillet — llm agents in production; cv research background, exploring rl & llms",
     links: [
       { label: "GitHub",   short: "github",   url: "https://github.com/adisujithkumar" },
       { label: "LinkedIn", short: "linkedin", url: "https://linkedin.com/in/adi-sujithkumar" },
@@ -19,9 +20,15 @@ const DATA = {
 
   experience: [
     {
-      org: "Two Dots", role: "Software Engineer", year: "2025 →", field: "full stack",
-      blurb: "Build and own the LLM voice + chat agents that walk renters through housing approval and show leasing agents where each application stands.",
-      detail: "Independently built and own multiple LLM-powered voice and chat bots end to end — the context pipeline, prompt architecture, and structured-output system behind them — and led the rollout to production. Turned a TurboTax-style income survey into a natural-language conversation through prompt engineering and persona-based testing, and built the eval infrastructure plus an internal training UI so the agents are measured, not tuned by feel.",
+      org: "Rillet", role: "Applied AI Engineer", year: "2026 →", field: "ai",
+      blurb: "Build Aura, the customer-facing AI assistant that answers questions about customers' data and takes actions on their behalf, plus the tooling, infrastructure, and evals behind it.",
+      detail: "Python work across the AI stack behind Aura: the assistant itself, the tooling and infrastructure it runs on, and the evaluation setup.",
+      tags: ["python"]
+    },
+    {
+      org: "Two Dots", role: "Software Engineer", year: "2025–26", field: "full stack",
+      blurb: "Built and owned the LLM voice + chat agents that walk renters through housing approval and show leasing agents where each application stands.",
+      detail: "Independently built and owned multiple LLM-powered voice and chat bots end to end — the context pipeline, prompt architecture, and structured-output system behind them — and led the rollout to production. Turned a TurboTax-style income survey into a natural-language conversation through prompt engineering and persona-based testing, and built the eval infrastructure plus an internal training UI so the agents are measured, not tuned by feel.",
       tags: ["typescript"]
     },
     {

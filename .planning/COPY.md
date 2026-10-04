@@ -16,15 +16,25 @@ Two ways to use them:
 ---
 
 ## Header / `whoami` (you chose: no on-page tagline)
+**Current bio line (live):** `applied ai engineer @ rillet — llm agents in production; cv research background, exploring rl & llms`
+
 If you ever want a one-liner, candidates:
 - A — *(none; let the work speak — current)*
 - B — `software engineer — i build LLM products end to end.`
 - C — `i ship LLM products by day; nights, i teach bots to play games.`
-- D (bio line) — `adi — software engineer @ two dots. ex-aws, ex-sumo logic. berkeley eecs.`
+- D (bio line) — `adi — software engineer @ two dots. ex-aws, ex-sumo logic. berkeley eecs.` *(stale: left Two Dots Aug 2026)*
 
 ---
 
 ## Experience blurbs
+
+**Rillet** — hook: `customer-facing AI agent`
+Aura is the customer-facing assistant, not an internal tool — an earlier draft had this wrong and undersold it. Named here because a customer-facing product name is public; re-check before adding any detail about internals.
+- A — Build Aura, the customer-facing AI assistant that answers questions about customers' data and takes actions on their behalf, plus the tooling, infrastructure, and evals behind it. **(live in `data.js`)**
+- B — Same as A, with "the customer-facing AI assistant" in place of the name. *(use if the name should stay off the page)*
+- C — On the team building Aura …; I work on the agent plus the tooling, infrastructure, and evals behind it. *(foregrounds the team; redundant — "Independently" on the Two Dots entry already carries the solo/team contrast)*
+
+Specificity line to hold: the product and what it does for customers, yes; how it is built inside, no.
 
 **Two Dots** — hook: `LLM agents in prod`
 - A — Build and own the LLM voice + chat agents that walk renters through housing approval and show leasing agents where each application stands.
@@ -89,5 +99,8 @@ If you ever want a one-liner, candidates:
 | awpy stars | ~310★ | **575★** (live count) |
 | awpy maps | 7 | **9** (repo validates across 9 — was under-stated) |
 | Knockout tests | 558-test suite | **500+ tests** (558 is the true `def test_` count; repo README says 472 — reconcile later) |
+| Two Dots year | 2025 → | **2025–26** (left Aug 2026; blurb/detail verbs moved to past tense) |
+| Current role | Two Dots | **Rillet** — Applied AI Engineer, `2026 →` (started Aug 2026) |
+| Tagline | Software Engineer — Product, LLMs, Full-Stack | **Applied AI Engineer — LLM agents, Product, Full-Stack** (also mirrored in `index.html` meta) |
 
 Everything else (titles, company names, the 0%→84.8% story, ~19K steps/s, 9-bot tournament, PR #235 merged, conical-BFS claims) verified accurate.
