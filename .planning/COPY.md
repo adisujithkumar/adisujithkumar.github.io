@@ -30,7 +30,7 @@ If you ever want a one-liner, candidates:
 
 **Rillet** — hook: `customer-facing AI agent`
 Aura is the customer-facing assistant, not an internal tool — an earlier draft had this wrong and undersold it. Named here because a customer-facing product name is public; re-check before adding any detail about internals.
-- A — Build Aura, the customer-facing AI assistant that answers questions about customers' data and takes actions on their behalf, plus the tooling, infrastructure, and evals behind it. **(live in `data.js`)**
+- A — Building Aura, the customer-facing AI assistant that answers questions about customers' data and takes actions on their behalf, plus the tooling, infrastructure, and evals behind it. **(live in `data.js`)**
 - B — Same as A, with "the customer-facing AI assistant" in place of the name. *(use if the name should stay off the page)*
 - C — On the team building Aura …; I work on the agent plus the tooling, infrastructure, and evals behind it. *(foregrounds the team; redundant — "Independently" on the Two Dots entry already carries the solo/team contrast)*
 

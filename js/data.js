@@ -21,7 +21,7 @@ const DATA = {
   experience: [
     {
       org: "Rillet", role: "Applied AI Engineer", year: "2026 →", field: "ai",
-      blurb: "Build Aura, the customer-facing AI assistant that answers questions about customers' data and takes actions on their behalf, plus the tooling, infrastructure, and evals behind it.",
+      blurb: "Building Aura, the customer-facing AI assistant that answers questions about customers' data and takes actions on their behalf, plus the tooling, infrastructure, and evals behind it.",
       detail: "Python work across the AI stack behind Aura: the assistant itself, the tooling and infrastructure it runs on, and the evaluation setup.",
       tags: ["python"]
     },
